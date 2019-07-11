@@ -19,7 +19,7 @@ This set of `R` scripts was designed to analyze the European Parliament votes th
 
 
 # Data
-Our tool was applied to data representing the activity of the members of the European Parliament (MEPs) during the 7th term (from June 2009 to June 2014), as described in [AFL'19]. The raw data describing this activity were retrieved from the [It's Your Parliament](http://www.itsyourparliament.eu/) website. There were some minor issues with these data, which we had to correct: some MEPs were represented twice, some profiles were incomplete, the policy domains were not defined for all vote texts, etc. These cleaned data are available on [FigShare](https://figshare.com/articles/NetVotes_2017_-_iKnow_17/5785833).
+Our tool was applied to data representing the activity of the members of the European Parliament (MEPs) during the 7th term (from June 2009 to June 2014), as described in [AFL'19]. The raw data describing this activity were retrieved from the [It's Your Parliament](http://www.itsyourparliament.eu/) website. There were some minor issues with these data, which we had to correct: some MEPs were represented twice, some profiles were incomplete, the policy domains were not defined for all vote texts, etc. These cleaned data are available on [FigShare](https://doi.org/10.6084/m9.figshare.5785833).
 
 
 # Organization
