@@ -1,18 +1,21 @@
 MultiNetVotes
 =======
-* Multiple Partitioning of Multiplex Signed Networks: Application to European Parliament Votes
+*Multiple Partitioning of Multiplex Signed Networks: Application to European Parliament Votes*
+
+* Copyright 2018-19 Nejat Arinik & Vincent Labatut
 
 MultiNetVotes is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. For source availability and license information see `licence.txt`
 
 * Lab site: http://lia.univ-avignon.fr/
 * GitHub repo: https://github.com/CompNet/MultiNetVotes
-* Contact: Nejat Arinik <nejat.arinik@univ-avignon.fr> and Vincent Labatut <vincent.labatut@univ-avignon.fr> and Rosa Figueiredo <rosa.figueiredo@univ-avignon.fr>
+* Contact: Nejat Arinik <nejat.arinik@univ-avignon.fr>
 
+This software is based on our previous project [NetVotes](https://github.com/CompNet/NetVotes)
 
 -----------------------------------------------------------------------
 
 # Description
-This set of R scripts was designed for analyzing the European Parliment votes through *multiplex network* approach. See [AFL'19] for more details.
+This set of `R` scripts was designed to analyze the European Parliament votes through a *multiplex network*-based approach. See reference [AFL'19] for more details.
 
 
 # Data
@@ -80,5 +83,5 @@ The script will produce the following subfolders in the folder `out`:
 
 
 # References
-* **[AFL'19]** Arinik, N.; Figueiredo, R.; Labatut, V. Multiple Partitioning of Multiplex Signed Networks: Application to European Parliament Votes.Social Networks (in press). 2019. [arXiv](https://arxiv.org/abs/1811.10337) -- Doi: [10.1016/j.socnet.2019.02.001](https://www.sciencedirect.com/science/article/pii/S0378873318300303)
+* **[AFL'19]** N. Arinik, R. Figueiredo & V. Labatut. *Multiple Partitioning of Multiplex Signed Networks: Application to European Parliament Votes.Social Networks*, 2019. [doi: 10.1016/j.socnet.2019.02.001](https://doi.org/10.1016/j.socnet.2019.02.001) - [⟨hal-02082574⟩](https://hal.archives-ouvertes.fr/hal-02082574)
 
