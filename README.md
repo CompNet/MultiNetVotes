@@ -8,7 +8,7 @@ MultiNetVotes is free software: you can redistribute it and/or modify it under t
 
 * Lab site: http://lia.univ-avignon.fr/
 * GitHub repo: https://github.com/CompNet/MultiNetVotes
-* Contact: Nejat Arinik <nejat.arinik@univ-avignon.fr>
+* Contact: Nejat Arinik <arinik9@gmail.com>
 
 This software is based on our previous project [NetVotes](https://github.com/CompNet/NetVotes)
 
@@ -19,14 +19,14 @@ This set of `R` scripts was designed to analyze the European Parliament votes th
 
 
 # Data
-Our tool was applied to data representing the activity of the members of the European Parliament (MEPs) during the 7th term (from June 2009 to June 2014), as described in [AFL'19]. The raw data describing this activity were retrieved from the [It's Your Parliament](http://www.itsyourparliament.eu/) website. There were some minor issues with these data, which we had to correct: some MEPs were represented twice, some profiles were incomplete, the policy domains were not defined for all vote texts, etc. These cleaned data are available on [FigShare](https://doi.org/10.6084/m9.figshare.5785833).
+Our tool was applied to data representing the activity of the members of the European Parliament (MEPs) during the 7th term (from June 2009 to June 2014), as described in [AFL'19]. The raw data describing this activity were retrieved from the [It's Your Parliament](http://www.itsyourparliament.eu/) website. There were some minor issues with these data, which we had to correct: some MEPs were represented twice, some profiles were incomplete, the policy domains were not defined for all vote texts, etc. These cleaned data, as well as our figures and results, are available on [FigShare](https://doi.org/10.6084/m9.figshare.17087435).
 
 
 # Organization
 Here are the folders composing the project:
 * Folder `src`: contains the source code (R scripts).
 * Folder `in`: contains the files used by our scripts, i.e. the inputs.
-  * Folder `itsyourparliament`: this folder will be contain raw input files. The raw data can be downloaded from [`figshare`](https://figshare.com/articles/NetVotes_2017_-_iKnow_17/5785833). 
+  * Folder `itsyourparliament`: this folder will be contain raw input files. The raw data can be downloaded from [`figshare`](https://doi.org/10.6084/m9.figshare.17087435). 
   * Folder `_overall`: the files in this folder will be generated from raw data.
     * `all-votes.csv`: individual vote data, i.e. how each MEP voted.
     * `dom-details.csv`: Committee and polcy details for each domain.
@@ -53,13 +53,13 @@ Here are the folders composing the project:
    * [`ggplot2`](https://cran.r-project.org/web/packages/ggplot2/)
    * [`scales`](https://cran.r-project.org/web/packages/scales/)
 3. Install [`Circos`](http://circos.ca/). Tested with the version 0.69.6. Set correctly the variable `CIRCOS_CMD` in `circos.R` (e.g. `/opt/circos-0.69-6/bin/circos`).
-3. Install [`IBM CPlex`](https://www.ibm.com/developerworks/community/blogs/jfp/entry/CPLEX_Is_Free_For_Students?lang=en). Tested with the version 12.8. Set correctly the variable `CPLEX.BIN.PATH` in `define-algos.R` (e.g. `/opt/ibm/ILOG/CPLEX_Studio128/cplex/bin/x86-64_linux/`).
+3. Install [`IBM CPlex`](https://www.ibm.com/developerworks/community/blogs/jfp/entry/CPLEX_Is_Free_For_Students?lang=en). Tested with the version 12.8 and 20.1. Set correctly the variable `CPLEX.BIN.PATH` in `define-algos.R` (e.g. `/opt/ibm/ILOG/CPLEX_Studio128/cplex/bin/x86-64_linux/`).
    * For ubuntu, type the following command:
      * `sudo ./cplex_studio12.8.8.linux-x86-64.bin` 
        * The default installation location for education version is: `/opt/ibm/ILOG/CPLEX_Studio128`.
        * The default installation location for trial version is: `/opt/ibm/ILOG/CPLEX_Studio_Community128/cplex/bin/x86-64_linux/`.
-4. Download the project of `ExCC` from [github](https://github.com/arinik9/ExCC). First, configure and then compile it. To test it, you can run the file `run.sh`.If everything works (i.e. if a file `ExCC-result.txt` created in the output folder), move the exectuable file `cplex-partition.jar`, which is in `exe`, into the folder `lib/ExCC` in this project.
-4. Download the raw data from from [`figshare`](https://figshare.com/articles/NetVotes_2017_-_iKnow_17/5785833). The only needed data is the folder named `itsyourparliament.zip`. Unzip it, then place it under `in/` (overwrite the existing one).
+4. Download the project of `ExCC` from [github](https://github.com/CompNet/ExCC). First, configure and then compile it. To test it, you can run the file `run.sh`.If everything works (i.e. if a file `ExCC-result.txt` created in the output folder), move the exectuable file `cplex-partition.jar`, which is in `exe`, into the folder `lib/ExCC` in this project.
+4. Download the raw data from from [`figshare`](https://doi.org/10.6084/m9.figshare.17087435). The only needed data is the folder named `itsyourparliament.zip`. Unzip it, then place it under `in/` (overwrite the existing one).
 5. Download this project from GitHub.
 
 
