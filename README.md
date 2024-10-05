@@ -70,7 +70,7 @@ Here are the folders composing the project:
        * The default installation location for education version is: `/opt/ibm/ILOG/CPLEX_Studio128`.
        * The default installation location for trial version is: `/opt/ibm/ILOG/CPLEX_Studio_Community128/cplex/bin/x86-64_linux/`.
 4. Download the project of `ExCC` from [GitHub](https://github.com/CompNet/ExCC). First, configure and then compile it. To test it, you can run the file `run.sh`.If everything works (i.e. if a file `ExCC-result.txt` created in the output folder), move the exectuable file `cplex-partition.jar`, which is in `exe`, into the folder `lib/ExCC` in this project.
-4. Download the raw data from from [Zenoso](https://doi.org/10.5281/zenodo.6816121). The only needed data is the folder named `itsyourparliament.zip`. Unzip it, then place it under `in/` (overwrite the existing one).
+4. Download the raw data from from [Zenodo](https://doi.org/10.5281/zenodo.6816121). The only needed data is the folder named `itsyourparliament.zip`. Unzip it, then place it under `in/` (overwrite the existing one).
 5. Download this project from GitHub.
 
 
