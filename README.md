@@ -10,23 +10,34 @@ MultiNetVotes is free software: you can redistribute it and/or modify it under t
 * GitHub repo: https://github.com/CompNet/MultiNetVotes
 * Contact: Nejat Arinik <arinik9@gmail.com>
 
-This software is based on our previous project [NetVotes](https://github.com/CompNet/NetVotes)
-
 -----------------------------------------------------------------------
 
-# Description
-This set of `R` scripts was designed to analyze the European Parliament votes through a *multiplex network*-based approach. See reference [AFL'19] for more details.
+## Description
+This set of `R` scripts was designed to analyze the European Parliament votes through a *multiplex network*-based approach. See reference [[AFL'20](#references)] for more details.
+
+This software is based on our previous project [NetVotes](https://github.com/CompNet/NetVotes). If you use this source code, or the associated data, please cite reference [[AFL'20](#references)]:
+```bibtex
+@Article{Arinik2020,
+  author    = {Arınık, Nejat and Figueiredo, Rosa and Labatut, Vincent},
+  title     = {Multiple Partitioning of Multiplex Signed Networks: Application to {E}uropean {P}arliament Votes},
+  journal   = {Social Networks},
+  year      = {2020},
+  volume    = {60},
+  pages     = {83-102},
+  doi       = {10.1016/j.socnet.2019.02.001},
+}
+```
 
 
-# Data
-Our tool was applied to data representing the activity of the members of the European Parliament (MEPs) during the 7th term (from June 2009 to June 2014), as described in [AFL'19]. The raw data describing this activity were retrieved from the [It's Your Parliament](http://www.itsyourparliament.eu/) website. There were some minor issues with these data, which we had to correct: some MEPs were represented twice, some profiles were incomplete, the policy domains were not defined for all vote texts, etc. These cleaned data, as well as our figures and results, are available on [FigShare](https://doi.org/10.6084/m9.figshare.17087435).
+## Data
+Our tool was applied to data representing the activity of the members of the European Parliament (MEPs) during the 7th term (from June 2009 to June 2014), as described in [[AFL'20](#references)]. The raw data describing this activity were retrieved from the [It's Your Parliament](http://www.itsyourparliament.eu/) website. There were some minor issues with these data, which we had to correct: some MEPs were represented twice, some profiles were incomplete, the policy domains were not defined for all vote texts, etc. These cleaned data, as well as our figures and results, are available on [Zenodo](https://doi.org/10.5281/zenodo.6816121).
 
 
-# Organization
+## Organization
 Here are the folders composing the project:
 * Folder `src`: contains the source code (R scripts).
 * Folder `in`: contains the files used by our scripts, i.e. the inputs.
-  * Folder `itsyourparliament`: this folder will be contain raw input files. The raw data can be downloaded from [`figshare`](https://doi.org/10.6084/m9.figshare.17087435). 
+  * Folder `itsyourparliament`: this folder will be contain raw input files. The raw data can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.6816121).
   * Folder `_overall`: the files in this folder will be generated from raw data.
     * `all-votes.csv`: individual vote data, i.e. how each MEP voted.
     * `dom-details.csv`: Committee and polcy details for each domain.
@@ -40,7 +51,7 @@ Here are the folders composing the project:
 * Folder `out`: contains the folders and files produced by our scripts. See the *Use* section for more details.
 
 
-# Installation
+## Installation
 1. Install the [`R` language](https://www.r-project.org/)
 2. Install the following R packages:
    * [`igraph`](http://igraph.org/r/) Tested with the version 1.2.2.
@@ -58,12 +69,12 @@ Here are the folders composing the project:
      * `sudo ./cplex_studio12.8.8.linux-x86-64.bin` 
        * The default installation location for education version is: `/opt/ibm/ILOG/CPLEX_Studio128`.
        * The default installation location for trial version is: `/opt/ibm/ILOG/CPLEX_Studio_Community128/cplex/bin/x86-64_linux/`.
-4. Download the project of `ExCC` from [github](https://github.com/CompNet/ExCC). First, configure and then compile it. To test it, you can run the file `run.sh`.If everything works (i.e. if a file `ExCC-result.txt` created in the output folder), move the exectuable file `cplex-partition.jar`, which is in `exe`, into the folder `lib/ExCC` in this project.
-4. Download the raw data from from [`figshare`](https://doi.org/10.6084/m9.figshare.17087435). The only needed data is the folder named `itsyourparliament.zip`. Unzip it, then place it under `in/` (overwrite the existing one).
+4. Download the project of `ExCC` from [GitHub](https://github.com/CompNet/ExCC). First, configure and then compile it. To test it, you can run the file `run.sh`.If everything works (i.e. if a file `ExCC-result.txt` created in the output folder), move the exectuable file `cplex-partition.jar`, which is in `exe`, into the folder `lib/ExCC` in this project.
+4. Download the raw data from from [Zenoso](https://doi.org/10.5281/zenodo.6816121). The only needed data is the folder named `itsyourparliament.zip`. Unzip it, then place it under `in/` (overwrite the existing one).
 5. Download this project from GitHub.
 
 
-# Use
+## Use
 1. Set correctly the variables `CIRCOS_CMD` and `CPLEX.BIN.PATH`.
 2. Open the `R` console.
 3. Set the current directory as the working directory, using `setwd("<my directory>")`.
@@ -81,7 +92,6 @@ The script will produce the following subfolders in the folder `out`:
         * `unsigned-partitions-with-meps-absence-thresh=<THRESHOLD>`: A subfolder containing partitions of the aggregated unsigned networks obtained through unsigned graph partitioning methods (i.e. community detection methods).
 
 
-
-# References
-* **[AFL'19]** N. Arinik, R. Figueiredo & V. Labatut. *Multiple Partitioning of Multiplex Signed Networks: Application to European Parliament Votes.Social Networks*, 2019. [doi: 10.1016/j.socnet.2019.02.001](https://doi.org/10.1016/j.socnet.2019.02.001) - [⟨hal-02082574⟩](https://hal.archives-ouvertes.fr/hal-02082574)
+## References
+* **[AFL'20]** N. Arinik, R. Figueiredo & V. Labatut. *Multiple Partitioning of Multiplex Signed Networks: Application to European Parliament Votes*. Social Networks 60:83-102, 2020. [doi: 10.1016/j.socnet.2019.02.001](https://doi.org/10.1016/j.socnet.2019.02.001) - [⟨hal-02082574⟩](https://hal.archives-ouvertes.fr/hal-02082574)
 
